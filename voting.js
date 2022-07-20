@@ -1,14 +1,14 @@
-const chooseStations = function (stations,goodStations = []) {
-
+const chooseStations = function (stations) {
+  let result = [];
   if(stations.length === 0){
-    return goodStations;
+    return result;
   }
   for(const s of stations){
     if(s[1] >= 20 && s.length === 3 && ((s[2] === 'school') || (s[2] === 'community centre'))){
-      goodStations.push(s[0]);
+      result.push(s[0]);
     }
   }
-  return goodStations;
+  return result;
 }
 
 
